@@ -5,7 +5,7 @@ import { saveAs } from "file-saver";
 import { motion } from "framer-motion";
 import { ArrowLeft, SaveIcon } from "lucide-react";
 
-import { cn, variants, trimWhitespace, isURL, trimLines } from "@/utils";
+import { cn, variants, trimWhitespace, isURL } from "@/utils";
 import { Button, Input, Spinner, Textarea } from "@/components/ui";
 
 export default function Home() {
