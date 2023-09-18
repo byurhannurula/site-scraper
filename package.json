@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write '**/*.{js,ts,jsx,tsx,json}'"
+    "format": "prettier --write '**/*.{js,ts,jsx,tsx,json}'",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@mozilla/readability": "^0.4.4",
@@ -45,17 +46,11 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-tailwindcss": "^3.13.0",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "postcss": "8.4.29",
     "prettier": "^3.0.3",
-    "pretty-quick": "^3.1.3",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint"
-    }
   }
 }

@@ -1,29 +1,25 @@
 import { JSDOM } from "jsdom";
+// import fetch from "isomorphic-fetch";
 import { NextResponse } from "next/server";
 import { Readability, isProbablyReaderable } from "@mozilla/readability";
 
 export async function GET(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const hasUrl = searchParams.has("url");
+  const { searchParams } = new URL(request.url);
+  const hasUrl = searchParams.has("url");
 
-    const url = hasUrl ? searchParams.get("url") : null;
+  const url = hasUrl ? searchParams.get("url") : null;
 
-    if (!url) {
-      return;
-    }
-
-    const response = await fetch(url);
-
-    const responseText = await response.text();
-
-    const parsedContent = await parseContent(url, responseText);
-
-    return NextResponse.json({ result: parsedContent });
-  } catch (error) {
-    console.log(error);
+  if (!url) {
     return NextResponse.json({ error: "" });
   }
+
+  const response = await fetch(url);
+
+  const responseText = await response.text();
+
+  const parsedContent = await parseContent(url, responseText);
+
+  return NextResponse.json({ result: parsedContent });
 }
 
 async function parseContent(
