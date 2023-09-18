@@ -96,8 +96,8 @@ export default function Home() {
             className={cn(contentClass)}
           >
             <h1 className={headerClass}>
-              Scraper is a simple tool which can fetch a content of a site or
-              post in a matter of a seconds.
+              The scraper is a simple tool that can fetch a site&apos;s content
+              or article in seconds.
             </h1>
             <Button size="lg" type="button" onClick={() => setCurrentStep(2)}>
               Get Started
@@ -110,10 +110,10 @@ export default function Home() {
             animate="show"
             initial="hide"
             variants={variants}
-            className={cn(contentClass, "max-w-2xl")}
+            className={cn(contentClass, "md:max-w-2xl")}
           >
             <h1 className={headerClass}>
-              Enter url of the site or post to scrape
+              Enter URL of the site or article to scrape
             </h1>
             <form className="flex flex-col items-center justify-center space-y-8 text-center">
               <Input
@@ -146,7 +146,7 @@ export default function Home() {
             className={cn(contentClass)}
           >
             <h1 className={headerClass}>
-              Here is the content of the page that have been scraped
+              Here is the content of the page that has been scraped
             </h1>
             <Textarea
               value={textContent}

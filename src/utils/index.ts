@@ -15,11 +15,11 @@ export const variants = {
     y: 0,
     transition: {
       ease: "easeOut",
-      duration: 0.3,
+      duration: 0.35,
     },
   },
   hide: {
-    y: -40,
+    y: -50,
     opacity: 0,
   },
 };
