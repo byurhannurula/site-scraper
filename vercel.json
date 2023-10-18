@@ -1,8 +1,7 @@
 {
   "functions": {
     "app/api/scrape/route.ts": {
-      "memory": 3000,
-      "maxDuration": 120
+      "maxDuration": 60
     }
   }
 }
