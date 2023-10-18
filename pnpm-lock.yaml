@@ -15,6 +15,7 @@ specifiers:
   '@types/react-dom': 18.2.7
   '@typescript-eslint/eslint-plugin': ^6.7.0
   '@typescript-eslint/parser': ^6.7.0
+  '@vercel/analytics': ^1.1.1
   autoprefixer: 10.4.15
   class-variance-authority: ^0.7.0
   clsx: ^2.0.0
@@ -48,6 +49,7 @@ dependencies:
   '@radix-ui/react-progress': 1.0.3_zkisbtryv3xtasf42ecsrjh3ky
   '@radix-ui/react-slot': 1.0.2_gq4reeurwxuj4hvyerswzzqthy
   '@radix-ui/react-toast': 1.1.4_zkisbtryv3xtasf42ecsrjh3ky
+  '@vercel/analytics': 1.1.1
   class-variance-authority: 0.7.0
   clsx: 2.0.0
   file-saver: 2.0.5
@@ -905,6 +907,12 @@ packages:
       '@typescript-eslint/types': 6.7.0
       eslint-visitor-keys: 3.4.3
     dev: true
+
+  /@vercel/analytics/1.1.1:
+    resolution: {integrity: sha512-+NqgNmSabg3IFfxYhrWCfB/H+RCUOCR5ExRudNG2+pcRehq628DJB5e1u1xqwpLtn4pAYii4D98w7kofORAGQA==}
+    dependencies:
+      server-only: 0.0.1
+    dev: false
 
   /abab/2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -3248,6 +3256,10 @@ packages:
     dependencies:
       lru-cache: 6.0.0
     dev: true
+
+  /server-only/0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
+    dev: false
 
   /set-function-name/2.0.1:
     resolution: {integrity: sha512-tMNCiqYVkXIZgc2Hnoy2IvC/f8ezc5koaRFkCjrpWzGpCd3qbZXPzVy9MAZzK1ch/X0jvSkojys3oqJN0qCmdA==}
