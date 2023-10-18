@@ -13,9 +13,22 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "" });
   }
 
-  const response = await fetch(url);
+  let responseText = "";
 
-  const responseText = await response.text();
+  const response = await fetch(url);
+  const contentType = response.headers.get("content-type");
+
+  if (!contentType?.includes("utf8")) {
+    const charset = contentType?.substring(contentType.indexOf("charset=") + 8);
+    const arrayBuffer = await response.arrayBuffer();
+
+    const dataView = new DataView(arrayBuffer);
+    const decoder = new TextDecoder(charset);
+
+    responseText = decoder.decode(dataView);
+  } else {
+    responseText = await response.text();
+  }
 
   const parsedContent = await parseContent(url, responseText);
 
